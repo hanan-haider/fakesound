@@ -6,6 +6,12 @@ import numpy as np
 from dataclasses import dataclass
 from torch.autograd import Variable
 
+
+import sys
+#WORKSPACE_PATH = "WORKSPACE_PATH" #"/kaggle/working"
+WORKSPACE_PATH ="/kaggle/working"
+sys.path.extend([WORKSPACE_PATH])
+
 ####################################
 #       Model utils
 ####################################
@@ -235,7 +241,7 @@ class WavLM_Detection(BaseDetectionModel):
         import sys
         WAVLM_PATH = f"{WORKSPACE_PATH}/models/WavLM" 
         sys.path.append(WAVLM_PATH)
-        from WavLM import WavLM, WavLMConfig
+        from models.WavLM.WavLM import WavLM, WavLMConfig
 
         # load the pre-trained checkpoints
         checkpoint = torch.load(f"{WORKSPACE_PATH}/ckpts/WavLM-Large.pt")

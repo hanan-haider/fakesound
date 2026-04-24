@@ -15,7 +15,8 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import SchedulerType, get_scheduler
 
 import sys
-WORKSPACE_PATH = "WORKSPACE_PATH"
+#WORKSPACE_PATH = "WORKSPACE_PATH" #"/kaggle/working"
+WORKSPACE_PATH ="/kaggle/working"
 sys.path.extend([WORKSPACE_PATH])
 
 from models import detection_model
